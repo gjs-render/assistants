@@ -46,8 +46,10 @@ def submit():
         logging.error(f"OpenAI API Error: {e}")
         return jsonify({"error": str(e)}), 500
     except Exception as e:
-        logging.error(f"Unexpected error: {e}")
+        logging.error(f"Unexpected error: {e}")  # Log the full error message
+        logging.error("Full traceback:", exc_info=True)  # Log the traceback
         return jsonify({"error": "An unexpected error occurred."}), 500
+
 
 if __name__ == '__main__':
     app.run(debug=True)
