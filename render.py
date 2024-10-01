@@ -20,7 +20,7 @@ logging.basicConfig(level=logging.INFO)
 # Route for the home page
 @app.route('/')
 def home():
-    return render_template('templates/assistants-render-100124.html')  # Render the HTML file
+    return render_template('assistants-render-100124.html')  # Render the HTML file
 
 # Route to handle form submission
 @app.route('/submit', methods=['POST'])
