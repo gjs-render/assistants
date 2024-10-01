@@ -37,7 +37,7 @@ def submit():
             ]
         )
         # Extract the response content
-        assistant_reply = response.choices[0].message['content']
+        assistant_reply = response.choices[0].message.content
         logging.info(f"Assistant response: {assistant_reply}")
         
         # You can choose to render the response on the home page or redirect with a success message
