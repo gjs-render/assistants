@@ -1,7 +1,8 @@
-from flask import Flask, render_template, jsonify, request
+from flask import Flask, request, jsonify, render_template
 from openai import OpenAI, OpenAIError
 import os
 from dotenv import load_dotenv
+import logging
 
 # Load environment variables
 load_dotenv()
