@@ -1,15 +1,20 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, jsonify, request
+from openai import OpenAI, OpenAIError
 import os
 from dotenv import load_dotenv
-import logging
 
 # Load environment variables
 load_dotenv()
 
+# Initialize Flask app
+app = Flask(__name__)
+
+# Initialize OpenAI client
+api_key = os.getenv('OPENAI_API_KEY')
+client = OpenAI(api_key=api_key)
+
 # Configure logging
 logging.basicConfig(level=logging.INFO)
-
-app = Flask(__name__)
 
 # Route for the home page
 @app.route('/')
