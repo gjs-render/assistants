@@ -38,7 +38,7 @@ assistant = client.beta.assistants.create(
 # Step 2: Upload files and add them to a Vector Store
 vector_store = client.beta.vector_stores.create(name="Financial Statements")
 
-file_paths = ["filePath/aapl-10K.pdf", "filePath/brka-10k.pdf"]
+file_paths = ["/filePath/aapl-10K.pdf", "/filePath/brka-10k.pdf"]
 file_streams = [open(path, "rb") for path in file_paths]
 
 try:
