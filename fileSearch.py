@@ -13,7 +13,7 @@ logging.basicConfig(level=logging.INFO)
 
 @app.route("/")
 def index():
-    return render_template("assts-fileSearch.html")
+    return render_template("fileSearch.html")
 
 @app.route('/chat', methods=['POST'])
 
