@@ -42,9 +42,6 @@ vector_store = client.beta.vector_stores.create(name="Financial Statements")
 file_paths = ["./aapl-10K.pdf", "./brka-10K.pdf"]
 file_streams = [open(path, "rb") for path in file_paths]
 
-
-file_streams = [open(path, "rb") for path in file_paths]
-
 try:
     file_batch = client.beta.vector_stores.file_batches.upload_and_poll(
         vector_store_id=vector_store.id, files=file_streams
