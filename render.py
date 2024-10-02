@@ -38,6 +38,8 @@ assistant = client.beta.assistants.create(
 # Step 2: Upload files and add them to a Vector Store
 vector_store = client.beta.vector_stores.create(name="Financial Statements")
 
+logging.info(f"Current Working Directory: {os.getcwd()}")
+
 # Ready the files for upload to OpenAI
 file_paths = ["./static/files/aapl-10K.pdf", "./static/files/brka-10K.pdf"]
 file_streams = [open(path, "rb") for path in file_paths]
