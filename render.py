@@ -9,7 +9,7 @@ api_key = os.getenv('OPENAI_API_KEY')
 client = OpenAI(api_key=api_key)
 
 logging.basicConfig(level=logging.INFO)
-
+print("Current Working Directory:", os.getcwd())
 
 @app.route("/")
 def index():
