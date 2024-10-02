@@ -39,7 +39,9 @@ assistant = client.beta.assistants.create(
 vector_store = client.beta.vector_stores.create(name="Financial Statements")
 
 ##file_paths = ["/filePath/aapl-10K.pdf", "/filePath/brka-10k.pdf"]
-file_paths = ["./aapl-10K.pdf", "./brka-10K.pdf"]
+##file_paths = ["./aapl-10K.pdf", "./brka-10K.pdf"]
+file_paths = ["./static/files/aapl-10K.pdf", "./static/files/brka-10K.pdf"]
+
 
 file_streams = [open(path, "rb") for path in file_paths]
 
