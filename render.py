@@ -39,10 +39,7 @@ assistant = client.beta.assistants.create(
 vector_store = client.beta.vector_stores.create(name="Financial Statements")
 
 # Ready the files for upload to OpenAI
-file_paths = [os.path.abspath("aapl-10K.pdf"), os.path.abspath("brka-10K.pdf")]
-print("Resolved file paths:", file_paths)
-file_streams = [open(path, "rb") for path in file_paths]
-
+file_paths = ["./static/files/aapl-10K.pdf", "./static/files/brka-10K.pdf"]
 file_streams = [open(path, "rb") for path in file_paths]
 
 try:
